@@ -639,8 +639,6 @@ proc/admin_notice(var/message, var/rights)
 		log_admin("[key_name(usr)] initiated a reboot.")
 
 
-		if(blackbox)
-			blackbox.save_all_data_to_sql()
 
 		sleep(50)
 		world.Reboot()
@@ -885,8 +883,7 @@ proc/admin_notice(var/message, var/rights)
 	log_admin("[key_name(usr)] initiated an immediate reboot.")
 
 
-	if(blackbox)
-		blackbox.save_all_data_to_sql()
+
 
 	world.Reboot()
 

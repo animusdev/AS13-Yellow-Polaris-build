@@ -399,8 +399,6 @@ obj/machinery/nuclearbomb/proc/nukehack_win(mob/user as mob)
 				world << "<B>Resetting in 30 seconds!</B>"
 
 
-				if(blackbox)
-					blackbox.save_all_data_to_sql()
 				sleep(300)
 				log_game("Rebooting due to nuclear detonation")
 				world.Reboot()

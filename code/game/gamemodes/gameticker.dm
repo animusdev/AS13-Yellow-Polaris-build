@@ -162,8 +162,6 @@ var/global/datum/controller/gameticker/ticker
 	processScheduler.start()
 	Master.SetRunLevel(RUNLEVEL_GAME)
 
-	if(config.sql_enabled)
-		statistic_cycle() // Polls population totals regularly and stores them in an SQL DB -- TLE
 
 	return 1
 
@@ -343,8 +341,6 @@ var/global/datum/controller/gameticker/ticker
 					time_left = round(restart_timeout)
 
 
-				if(blackbox)
-					blackbox.save_all_data_to_sql()
 
 				if(!delay_end)
 					while(time_left > 0)
