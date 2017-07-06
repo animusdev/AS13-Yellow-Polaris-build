@@ -51,5 +51,4 @@
 			var/germ_heal = heal_amount * 100
 			G.germ_level = min(0, G.germ_level - germ_heal)
 
-	feedback_add_details("changeling_powers","AP")
 	return 1

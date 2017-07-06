@@ -559,7 +559,6 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 				screen=6
 			else
 				var/image = photo_data ? photo_data.photo : null
-				feedback_inc("newscaster_stories",1)
 				news_network.SubmitArticle(msg, scanned_user, channel_name, image, 0)
 				screen=4
 
@@ -954,7 +953,6 @@ obj/item/weapon/newspaper/attackby(obj/item/weapon/W as obj, mob/user as mob)
 		scanned_user = "[ai_user.name] ([ai_user.job])"
 
 /obj/machinery/newscaster/proc/print_paper()
-	feedback_inc("newscaster_newspapers_printed",1)
 	var/obj/item/weapon/newspaper/NEWSPAPER = new /obj/item/weapon/newspaper
 	for(var/datum/feed_channel/FC in news_network.network_channels)
 		NEWSPAPER.news_content += FC

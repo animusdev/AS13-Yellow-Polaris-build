@@ -272,7 +272,6 @@
 
 	spawn_result()
 		..()
-		feedback_inc("mecha_ripley_created",1)
 		return
 
 
@@ -554,7 +553,6 @@
 
 	spawn_result()
 		..()
-		feedback_inc("mecha_gygax_created",1)
 		return
 
 /datum/construction/mecha/firefighter_chassis
@@ -778,7 +776,6 @@
 
 	spawn_result()
 		..()
-		feedback_inc("mecha_firefighter_created",1)
 		return
 
 /datum/construction/mecha/durand_chassis
@@ -1058,7 +1055,6 @@
 
 	spawn_result()
 		..()
-		feedback_inc("mecha_durand_created",1)
 		return
 
 
@@ -1291,5 +1287,4 @@
 
 	spawn_result()
 		..()
-		feedback_inc("mecha_odysseus_created",1)
 		return

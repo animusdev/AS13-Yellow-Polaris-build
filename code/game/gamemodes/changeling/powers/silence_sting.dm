@@ -23,5 +23,4 @@
 		duration = duration + 10
 		src << "<span class='notice'>They will be unable to cry out in fear for a little longer.</span>"
 	T.silent += duration
-	feedback_add_details("changeling_powers","SS")
 	return 1

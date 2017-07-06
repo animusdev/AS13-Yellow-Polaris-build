@@ -40,5 +40,4 @@
 	T.add_modifier(type_to_give, 2 MINUTES)
 
 
-	feedback_add_details("changeling_powers","DTS")
 	return 1

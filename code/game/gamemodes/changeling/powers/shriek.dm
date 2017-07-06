@@ -85,7 +85,6 @@
 
 	changeling.last_shriek = world.time
 
-	feedback_add_details("changeling_powers","RS")
 	return 1
 
 //EMP version

@@ -336,12 +336,10 @@ var/global/datum/controller/gameticker/ticker
 				var/time_left
 
 				if (mode.station_was_nuked)
-					feedback_set_details("end_proper","nuke")
 					time_left = 1 MINUTE //No point waiting five minutes if everyone's dead.
 					if(!delay_end)
 						world << "<span class='notice'><b>Rebooting due to destruction of station in [round(time_left/600)] minutes.</b></span>"
 				else
-					feedback_set_details("end_proper","proper completion")
 					time_left = round(restart_timeout)
 
 

@@ -54,5 +54,4 @@
 		src.verbs += /mob/proc/changeling_transform
 		src.regenerate_icons()
 
-	feedback_add_details("changeling_powers","TR")
 	return 1
