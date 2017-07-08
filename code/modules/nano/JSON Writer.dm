@@ -48,7 +48,7 @@ json_writer
 					var/lrep = length(json_escape[targ])
 					txt = copytext(txt, 1, i) + json_escape[targ] + copytext(txt, i + length(targ))
 					start = i + lrep
-					
+
 			return {""[txt]""}
 
 		is_associative(list/L)

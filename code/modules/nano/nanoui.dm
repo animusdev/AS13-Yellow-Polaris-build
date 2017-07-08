@@ -86,7 +86,7 @@ nanoui is used to open and update nano browser uis
 	add_template("main", ntemplate_filename)
 
 	if (ntitle)
-		title = sanitize(ntitle)
+		title = sanitize(strip_improper(ntitle))
 	if (nwidth)
 		width = nwidth
 	if (nheight)
@@ -467,7 +467,7 @@ nanoui is used to open and update nano browser uis
 	var/list/send_data = get_send_data(data)
 
 	//user << list2json_usecache(send_data) // used for debugging //NANO DEBUG HOOK
-	user << output(list2params(list(list2json_usecache(send_data))),"[window_id].browser:receiveUpdateData")
+	user << output(list2params(list(strip_improper(list2json_usecache(send_data)))),"[window_id].browser:receiveUpdateData")
 
  /**
   * This Topic() proc is called whenever a user clicks on a link within a Nano UI
