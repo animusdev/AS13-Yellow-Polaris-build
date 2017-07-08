@@ -185,9 +185,6 @@ ANTAG_HUD_RESTRICTED
 ALLOW_AI
 
 
-## disable abandon mob
-# NORESPAWN
-
 ## disables calling del(src) on newmobs if they logout before spawnin in
 # DONT_DEL_NEWMOB
 
@@ -366,6 +363,9 @@ EVENT_CUSTOM_START_MAJOR 80;100
 
 ## Uncomment to disable respawning by default.
 #DISABLE_RESPAWN
+
+## Set time player must wait till respawn.
+RESPAWN_TIME 20
 
 ## Strength of ambient star light. Set to 0 or less to turn off. A value of 1 is unlikely to have a noticeable effect in most lightning systems.
 STARLIGHT 0

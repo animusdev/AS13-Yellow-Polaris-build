@@ -154,6 +154,7 @@ var/list/admin_verbs_server = list(
 	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/adrev,
+	 /client/proc/time_to_respawn,
 	/datum/admins/proc/adspawn,
 	/datum/admins/proc/adjump,
 	/datum/admins/proc/toggle_aliens,
@@ -407,6 +408,17 @@ var/list/admin_verbs_mentor = list(
 
 
 
+/client/proc/time_to_respawn()
+	set category = "Server"
+	set name = "Edit time to respawn"
+
+	if(!check_rights(R_SERVER))    return
+
+	var/temp = 0
+	temp = input(usr,"Set time (in minutes)","Time to respawn",initial(config.respawn_time)) as num|null
+	if (temp >= 0)
+		config.respawn_time = temp
+		log_admin("[usr.key] edit respawn time to [config.respawn_time]")
 
 /client/proc/admin_ghost()
 	set category = "Admin"
