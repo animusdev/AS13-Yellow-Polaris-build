@@ -630,8 +630,7 @@ datum/objective/capture
 			return 0
 
 // Heist objectives.
-datum/objective/heist
-	proc/choose_target()
+datum/objective/heist/proc/choose_target()
 		return
 
 datum/objective/heist/kidnap
@@ -789,6 +788,43 @@ datum/objective/heist/salvage
 
 		if(total_amount >= target_amount) return 1
 		return 0
+
+var/heist_rob_total = 0
+/proc/heist_recursive_price_check(atom/movable/AM,loop=0)
+	loop++
+	if(loop > 15) return
+	heist_rob_total += AM.get_price()
+	if(AM.contents && AM.contents.len)
+		for(var/atom/movable/I in AM.contents)
+			heist_rob_total += I.get_price()
+			if(I.contents && I.contents.len)
+				heist_recursive_price_check(I,loop)
+
+/proc/heist_recursive_price_reset(atom/movable/AM,loop=0)
+	loop++
+	if(loop > 15) return
+	AM.price = 0
+	if(AM.contents && AM.contents.len)
+		for(var/atom/movable/I in AM.contents)
+			I.price = 0
+			if(I.contents && I.contents.len)
+				heist_recursive_price_reset(I,loop)
+
+/datum/objective/heist/robbery/choose_target()
+	target = "valuables"
+	target_amount = 1000000
+	explanation_text = "Ransack the station for any valuables. Target: $1.000.000 "
+
+/datum/objective/heist/robbery/check_completion()
+	heist_rob_total = 0
+	for(var/atom/movable/AM in locate(/area/skipjack_station/start))
+		heist_recursive_price_check(AM)
+
+	if(heist_rob_total >= target_amount) return 1
+	return 0
+
+
+
 
 
 /datum/objective/heist/preserve_crew
