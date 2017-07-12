@@ -117,31 +117,12 @@ var/datum/antagonist/raider/raiders
 
 /datum/antagonist/raider/create_global_objectives()
 
-	if(!..())
-		return 0
-
-	var/i = 1
-	var/max_objectives = pick(2,2,2,2,3,3,3,4)
 	global_objectives = list()
-	while(i<= max_objectives)
-		var/list/goals = list("kidnap","loot","salvage")
-		var/goal = pick(goals)
-		var/datum/objective/heist/O
 
-		if(goal == "kidnap")
-			goals -= "kidnap"
-			O = new /datum/objective/heist/kidnap()
-		else if(goal == "loot")
-			O = new /datum/objective/heist/loot()
-		else
-			O = new /datum/objective/heist/salvage()
-		O.choose_target()
-		global_objectives |= O
+	var/datum/objective/heist/O = new /datum/objective/heist/robbery()
+	O.choose_target()
+	global_objectives |= O
 
-		i++
-
-	global_objectives |= new /datum/objective/heist/preserve_crew
-	return 1
 
 /datum/antagonist/raider/check_victory()
 	// Totally overrides the base proc.
@@ -222,6 +203,7 @@ var/datum/antagonist/raider/raiders
 		player.equip_to_slot_or_del(new new_glasses(player),slot_glasses)
 		player.equip_to_slot_or_del(new new_helmet(player),slot_head)
 		player.equip_to_slot_or_del(new new_suit(player),slot_wear_suit)
+		player.equip_to_slot_or_del(new /obj/item/device/price_tool(player), slot_r_hand)
 		equip_weapons(player)
 
 	var/obj/item/weapon/card/id/id = create_id("Visitor", player, equip = 0)

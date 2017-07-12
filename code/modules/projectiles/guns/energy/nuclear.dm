@@ -36,7 +36,7 @@
 	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 	modifystate = "fm-2tstun"
 
-//	requires_two_hands = 1
+	requires_two_hands = 1
 	one_handed_penalty = 2
 
 	firemodes = list(
@@ -58,7 +58,7 @@
 	self_recharge = 1
 	modifystate = null
 
-//	requires_two_hands = 1
+	requires_two_hands = 1
 	one_handed_penalty = 1 // It's rather bulky, so holding it in one hand is a little harder than with two, however it's not 'required'.
 
 	firemodes = list(
