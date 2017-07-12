@@ -20,6 +20,9 @@
 	accuracy = -5
 	scoped_accuracy = 5
 	var/bolt_open = 0
+	requires_two_hands = 1
+	one_handed_penalty = 6
+
 
 /obj/item/weapon/gun/projectile/heavysniper/update_icon()
 	if(bolt_open)

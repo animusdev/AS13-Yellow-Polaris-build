@@ -13,8 +13,8 @@
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten")
 	var/lightcolor = "#FF6A00"
-	var/stunforce = 0
-	var/agonyforce = 60
+	var/stunforce = 2
+	var/agonyforce = 80
 	var/status = 0		//whether the thing is on or not
 	var/obj/item/weapon/cell/bcell = null
 	var/hitcost = 240
@@ -165,7 +165,7 @@
 		var/mob/living/carbon/human/H = target
 		affecting = H.get_organ(hit_zone)
 
-	if(user.a_intent == I_HURT || user.a_intent == I_DISARM)
+	if(user.a_intent == I_HURT)
 		. = ..()
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
 		agony *= 0.5
@@ -217,7 +217,7 @@
 	desc = "An improvised stun baton."
 	icon_state = "stunprod_nocell"
 	item_state = "prod"
-	force = 3
+	force = 0
 	throwforce = 5
 	stunforce = 0
 	agonyforce = 60	//same force as a stunbaton, but uses way more charge.
