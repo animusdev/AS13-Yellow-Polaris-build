@@ -170,7 +170,7 @@
 	icon_state = "stun"
 	nodamage = 1
 	taser_effect = 1
-	agony = 40
+	agony = 50
 	damage_type = HALLOSS
 	light_color = "#FFFFFF"
 
@@ -181,4 +181,4 @@
 /obj/item/projectile/beam/stun/weak
 	name = "weak stun beam"
 	icon_state = "stun"
-	agony = 25
+	agony = 40

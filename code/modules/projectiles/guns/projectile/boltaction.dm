@@ -12,21 +12,30 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	load_method = SINGLE_CASING|SPEEDLOADER
 	action_sound = 'sound/weapons/riflebolt.ogg'
+	requires_two_hands = 1
+	one_handed_penalty = 4
+
 
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/practice // For target practice
 	desc = "A bolt-action rifle with a lightweight synthetic wood stock, designed for competitive shooting. Comes shipped with practice rounds pre-loaded into the gun. Popular among professional marksmen. Uses 7.62mm rounds."
 	ammo_type = /obj/item/ammo_casing/a762p
+	requires_two_hands = 1
+	one_handed_penalty = 4
 
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/ceremonial
 	name = "ceremonial bolt-action rifle"
 	desc = "A bolt-action rifle with a heavy, high-quality wood stock that has a beautiful finish. Clearly not intended to be used in combat. Uses 5.56mm rounds."
 	ammo_type = /obj/item/ammo_casing/a762/blank
+	requires_two_hands = 1
+	one_handed_penalty = 4
 
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/mosin
 	name = "\improper Mosin Nagant"
 	desc = "Despite its age, the Mosin Nagant continues to be a favorite weapon among colonists, conscripts, and militias across the cosmos. Most today are built by Chen-Iltchenko Firearms, but it's hard to say who built this particular gun, considering the design has been ripped off by just about every arms manufacturer in the galaxy. Uses 7.62mm rounds."
 	icon_state = "mosin"
 	item_state = "mosin"
+	requires_two_hands = 1
+	one_handed_penalty = 4
 
 // Stole hacky terrible code from doublebarrel shotgun. -Spades
 /obj/item/weapon/gun/projectile/shotgun/pump/rifle/mosin/attackby(var/obj/item/A as obj, mob/user as mob)
