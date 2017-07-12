@@ -64,7 +64,7 @@
 	var/list/burst_accuracy = list(0) //allows for different accuracies for each shot in a burst. Applied on top of accuracy
 	var/list/dispersion = list(0)
 	var/mode_name = null
-	var/requires_two_hands
+	var/requires_two_hands = 0
 	var/wielded_icon = "gun_wielded"
 	var/one_handed_penalty = 0 // Penalty applied if someone fires a two-handed gun with one hand.
 

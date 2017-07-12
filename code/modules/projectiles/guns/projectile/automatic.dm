@@ -11,9 +11,10 @@
 	ammo_type = /obj/item/ammo_casing/a9mm
 	multi_aim = 1
 	burst_delay = 2
+	wielded_icon = "assault-wielded"
 
-//	requires_two_hands = 1
-	one_handed_penalty = 1
+	requires_two_hands = 1
+	one_handed_penalty = 3
 
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
@@ -38,8 +39,8 @@
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 
-//	requires_two_hands = 1
-	one_handed_penalty = 2
+	requires_two_hands = 1
+	one_handed_penalty = 3
 
 /obj/item/weapon/gun/projectile/automatic/c20r/update_icon()
 	..()
@@ -62,7 +63,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m556
 	allowed_magazines = list(/obj/item/ammo_magazine/m556)
-
+	requires_two_hands = 1
 	one_handed_penalty = 4
 
 	firemodes = list(
@@ -119,7 +120,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m762)
 	auto_eject = 1
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
-
+	requires_two_hands = 1
 	one_handed_penalty = 4
 
 	burst_delay = 4
@@ -189,7 +190,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m556saw
 	allowed_magazines = list(/obj/item/ammo_magazine/m556saw, /obj/item/ammo_magazine/m556)
-
+	requires_two_hands = 1
 	one_handed_penalty = 6
 
 	firemodes = list(
@@ -259,7 +260,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m12gdrum
 	allowed_magazines = list(/obj/item/ammo_magazine/m12gdrum)
-
+	requires_two_hands = 1
 	one_handed_penalty = 4
 
 	firemodes = list(
@@ -332,7 +333,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/m45tommy
 	allowed_magazines = list(/obj/item/ammo_magazine/m45tommy, /obj/item/ammo_magazine/m45tommydrum)
-
+	requires_two_hands = 1
 	firemodes = list(
 		list(mode_name="semiauto", burst=1, fire_delay=0),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0))
