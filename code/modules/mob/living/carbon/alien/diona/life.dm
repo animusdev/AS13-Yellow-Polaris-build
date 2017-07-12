@@ -11,7 +11,7 @@
 	if(nutrition > 500)
 		nutrition = 500
 	if(light_amount > 2) //if there's enough light, heal
-		adjustBruteLoss(-1)
-		adjustFireLoss(-1)
-		adjustToxLoss(-1)
-		adjustOxyLoss(-1)
+		adjustBruteLoss(-0.01)
+		adjustFireLoss(-0.01)
+		adjustToxLoss(-0.01)
+		adjustOxyLoss(-0.01)
