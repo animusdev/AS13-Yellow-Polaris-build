@@ -11,8 +11,9 @@
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	matter = list(DEFAULT_WALL_MATERIAL = 2000)
 	projectile_type = /obj/item/projectile/beam/midlaser
-//	requires_two_hands = 1
+	requires_two_hands = 1
 	one_handed_penalty = 2
+
 
 	firemodes = list(
 		list(mode_name="normal", projectile_type=/obj/item/projectile/beam/midlaser, charge_cost = 240),
@@ -29,6 +30,7 @@
 	desc = "A modified version of the HI G40E, this one fires less concentrated energy bolts designed for target practice."
 	projectile_type = /obj/item/projectile/beam/practice
 	charge_cost = 48
+	requires_two_hands = 1
 
 	cell_type = /obj/item/weapon/cell/device
 
@@ -78,7 +80,7 @@ obj/item/weapon/gun/energy/retro
 	battery_lock = 1
 	fire_delay = 20
 	w_class = ITEMSIZE_LARGE
-//	requires_two_hands = 1
+	requires_two_hands = 1
 	one_handed_penalty = 6 // The thing's heavy and huge.
 	accuracy = 3
 	charge_cost = 600
@@ -123,7 +125,7 @@ obj/item/weapon/gun/energy/retro
 	w_class = ITEMSIZE_HUGE // So it can't fit in a backpack.
 	accuracy = -3 //shooting at the hip
 	scoped_accuracy = 0
-//	requires_two_hands = 1
+	requires_two_hands = 1
 	one_handed_penalty = 4 // The weapon itself is heavy, and the long barrel makes it hard to hold steady with just one hand.
 
 /obj/item/weapon/gun/energy/sniperrifle/verb/scope()

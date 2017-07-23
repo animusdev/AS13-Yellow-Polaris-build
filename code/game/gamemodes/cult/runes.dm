@@ -213,7 +213,7 @@ var/list/sacrificed = list()
 							emergency_shuttle.launch_time = 0	// Cannot recall
 
 				log_and_message_admins_many(cultists, "summoned the end of days.")
-//				new /obj/singularity/narsie/large(src.loc)
+				new /obj/singularity/narsie/large(src.loc)
 				return
 			else
 				return fizzle()

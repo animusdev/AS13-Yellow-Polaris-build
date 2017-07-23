@@ -83,7 +83,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	valid_transform_species = list("Human", "Unathi", "Tajara", "Skrell", "Diona", "Teshari", "Monkey")
 	monochromatic = 1
 
-	var/heal_rate = 5 // Temp. Regen per tick.
+	var/heal_rate = 2 // Temp. Regen per tick.
 
 /datum/species/shapeshifter/promethean/New()
 	..()
