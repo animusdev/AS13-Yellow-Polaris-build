@@ -321,3 +321,54 @@
 	icon_state = "s-casing-spent"
 	BB = null
 	projectile_type = null
+	/obj/item/ammo_casing/spent // For simple hostile mobs only, so they don't cough up usable bullets when firing. This is for literally nothing else.
+	icon_state = "s-casing-spent"
+	BB = null
+	projectile_type = null
+
+/obj/item/ammo_casing/caseless
+	caseless = 1
+	name = "caseless bullet"
+	icon_state = "cless-casing"
+
+/obj/item/ammo_casing/caseless/wardenrevolver
+	caliber = "32"
+	icon_state = "cless-casing"
+	desc = "A .32 caseless bullet."
+	projectile_type = /obj/item/projectile/bullet/impulse/revolver
+
+/obj/item/ammo_casing/caseless/wardenrevolver/ap
+	desc = "An AP .32 caseless bullet."
+	caliber = "32"
+	projectile_type = /obj/item/projectile/bullet/impulse/revolver/ap
+
+/obj/item/ammo_casing/caseless/traumatic
+	caliber = "10x45"
+	desc = "A traumatic 10x45mm caseless bullet."
+	projectile_type = /obj/item/projectile/bullet/impulse/traumatic
+
+/obj/item/ammo_casing/caseless/traumatic/hp
+	caliber = "10x45"
+	desc = "An HP 10x45mm caseless bullet."
+	projectile_type = /obj/item/projectile/bullet/impulse/traumatichp
+
+/obj/item/ammo_casing/caseless/secpistol
+	desc = "A 5.7x28mm caseless bullet."
+	caliber = "5.7x28"
+	projectile_type = /obj/item/projectile/bullet/impulse
+
+/obj/item/ammo_casing/caseless/secpistol/ap
+	desc = "An AP 5.7x28mm caseless bullet."
+	caliber = "5.7x28"
+	projectile_type = /obj/item/projectile/bullet/impulse/ap
+
+/obj/item/ammo_casing/caseless/impulsecarbine
+	desc = "A 7.5x54mm caseless bullet."
+	caliber = "7.5x54"
+	projectile_type = /obj/item/projectile/bullet/impulse/rifle
+
+/obj/item/ammo_casing/caseless/impulsecarbine/ap
+	desc = "An AP 7.5x54mm caseless bullet."
+	caliber = "7.5x54"
+	projectile_type = /obj/item/projectile/bullet/impulse/rifle/ap
+

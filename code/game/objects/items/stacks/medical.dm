@@ -115,6 +115,14 @@
 					user << "<span class='warning'>\The [src] is used up, but there are more wounds to treat on \the [affecting.name].</span>"
 			use(used)
 
+/obj/item/stack/medical/bruise_pack/sec
+	name = "roll of gauze"
+	singular_name = "gauze length"
+	desc = "Some sterile gauze to wrap around bloody stumps."
+	icon_state = "secbandage"
+	amount = 3
+	max_amount = 3
+
 /obj/item/stack/medical/ointment
 	name = "ointment"
 	desc = "Used to treat those nasty burns."

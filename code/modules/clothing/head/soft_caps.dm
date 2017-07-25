@@ -98,3 +98,9 @@
  	name = "shipping cap"
  	desc = "It's a ballcap bearing the colors of Major Bill's Shipping."
  	icon_state = "mbillsoft"
+
+/obj/item/clothing/head/soft/sec
+	name = "field cap"
+	desc = "It's a field cap in tasteful dark navy color. That's a NT insignia on it"
+	icon_state = "constablecap"
+

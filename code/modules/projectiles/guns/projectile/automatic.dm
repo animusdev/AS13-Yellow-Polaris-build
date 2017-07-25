@@ -373,3 +373,58 @@
 		icon_state = "bullpup-empty"
 	item_state = (ammo_magazine)? "bullpup" : "bullpup-empty"
 	if(!ignore_inhands) update_held_icon()
+
+/obj/item/weapon/gun/projectile/automatic/impulsepdw
+	name = "impulse PDW"
+	desc = "The Ares SM-3 is a compact impulse submachine gun. Despite its fierce reputation, it still manages to feel like a toy. Uses 5.7x28mm rounds."
+	icon_state = "impulsepdw"
+	item_state = "pdw"
+	w_class = 3
+	caliber = "5.7x28"
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 2)
+	slot_flags = SLOT_BELT
+	fire_sound = 'sound/weapons/fireimpulsesmg.wav'
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a57x28pdw
+	allowed_magazines = list(/obj/item/ammo_magazine/a57x28pdw)
+	fire_delay = 0
+
+	firemodes = list(
+		list(mode_name="semiauto", burst=1, fire_delay=0),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0))
+		)
+
+/obj/item/weapon/gun/projectile/automatic/impulsepdw/update_icon(var/ignore_inhands)
+    ..(ignore_inhands)
+    if(ammo_magazine)
+        icon_state = "impulsepdw"
+    else
+        icon_state = "impulsepdw-empty"
+
+/obj/item/weapon/gun/projectile/automatic/impulsecarbine
+	name = "impulse carbine"
+	desc = "The Diemaco Sentinel is an reliable assault carbine. Perfect for CQB. Uses 7.5x54mm rounds."
+	icon_state = "impulsecarbine"
+	item_state = "carbine"
+	w_class = 4
+	caliber = "7.5x54"
+	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 5)
+	slot_flags = SLOT_BACK
+	fire_sound = 'sound/weapons/fireimpulserifle.wav'
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a75x54
+	allowed_magazines = list(/obj/item/ammo_magazine/a75x54)
+	fire_delay = 3
+	accuracy = 2
+
+	firemodes = list(
+		list(mode_name="semiauto", burst=1, fire_delay=0),
+		list(mode_name="2-round bursts", burst=2, fire_delay=null, move_delay=4,    burst_accuracy=list(0,-1), dispersion=list(0.0, 0.6))
+		)
+
+/obj/item/weapon/gun/projectile/automatic/impulsecarbine/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "impulsecarbine"
+	else
+		icon_state = "impulsecarbine-empty"

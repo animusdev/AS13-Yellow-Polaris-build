@@ -93,9 +93,13 @@
 	name = "Emergency Space Helmet"
 	icon_state = "syndicate-helm-orange"
 	desc = "A simple helmet with a built in light, smells like mothballs."
+	sprite_sheets = list(
+		"Teshari" = 'icons/mob/species/seromi/head.dmi')
 
 /obj/item/clothing/suit/space/emergency
 	name = "Emergency Softsuit"
 	icon_state = "syndicate-orange"
 	desc = "A thin, ungainly softsuit colored in blaze orange for rescuers to easily locate, looks pretty fragile."
 	slowdown = 4
+	sprite_sheets = list(
+		"Teshari" = 'icons/mob/species/seromi/suit.dmi')

@@ -23,6 +23,107 @@
 /************************************************************************/
 
 
+///////.32 caseless///////
+
+/obj/item/ammo_magazine/a32
+	name = "speedloader (.32 caseless)"
+	desc = "A speedloader for .32 impulse revolvers."
+	icon_state = "32cless"
+	caliber = "32"
+	ammo_type = /obj/item/ammo_casing/caseless/wardenrevolver
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	max_ammo = 6
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/a32/ap
+	name = "speedloader (.32 caseless AP)"
+	desc = "An armor-pierce speedloader for .32 impulse revolvers."
+	icon_state = "32cless"
+	caliber = "32"
+	ammo_type = /obj/item/ammo_casing/caseless/wardenrevolver/ap
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	max_ammo = 6
+	multiple_sprites = 1
+
+///////10x45 caseless///////
+
+/obj/item/ammo_magazine/a10x45
+	mag_type = MAGAZINE
+	name = "ammo cartridge (10x45mm caseless)"
+	desc = "A less-lethal cartridge for 10x45 impulse guns."
+	icon_state = "traumaticmag-nlethal"
+	caliber = "10x45"
+	ammo_type = /obj/item/ammo_casing/caseless/traumatic
+	matter = list(DEFAULT_WALL_MATERIAL = 620)
+	max_ammo = 5
+
+/obj/item/ammo_magazine/a10x45/hp
+	mag_type = MAGAZINE
+	name = "ammo cartridge (10x45mm caseless)"
+	desc = "A hollow-point cartridge for 10x45 impulse guns."
+	icon_state = "traumaticmag-lethal"
+	caliber = "10x45"
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	ammo_type = /obj/item/ammo_casing/caseless/traumatic/hp
+
+
+///////5.7x28 caseless///////
+
+/obj/item/ammo_magazine/a57x28
+	mag_type = MAGAZINE
+	name = "ammo magazine (5.7x28mm caseless)"
+	desc = "A magazine for 5.7x28 impulse guns."
+	icon_state = "5.7x28pistol"
+	caliber = "5.7x28"
+	ammo_type = /obj/item/ammo_casing/caseless/secpistol
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	max_ammo = 12
+	multiple_sprites = 1
+	matter = list(DEFAULT_WALL_MATERIAL = 2320)
+
+/obj/item/ammo_magazine/a57x28/ap
+	name = "ammo magazine (5.7x28mm caseless AP)"
+	desc = "An AP magazine for 5.7x28 impulse guns."
+	icon_state = "5.7x28pistol"
+	caliber = "5.7x28"
+	ammo_type = /obj/item/ammo_casing/caseless/secpistol/ap
+
+/obj/item/ammo_magazine/a57x28pdw
+	mag_type = MAGAZINE
+	name = "PDW ammo magazine (5.7x28mm caseless)"
+	desc = "A magazine for 5.7x28 impulse guns."
+	icon_state = "5.7x28pdw"
+	caliber = "5.7x28"
+	ammo_type = /obj/item/ammo_casing/caseless/secpistol
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	max_ammo = 28
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/a57x28pdw/ap
+	name = "PDW ammo magazine (5.7x28mm caseless AP)"
+	desc = "An AP magazine for 5.7x28 impulse guns."
+	icon_state = "5.7x28pdw"
+	ammo_type = /obj/item/ammo_casing/caseless/secpistol/ap
+	matter = list(DEFAULT_WALL_MATERIAL = 2400)
+
+///////7.5x54 caseless///////
+
+/obj/item/ammo_magazine/a75x54
+	mag_type = MAGAZINE
+	name = "ammo magazine (7.5x54mm caseless)"
+	desc = "A magazine for 7.5x54 impulse guns."
+	icon_state = "7.5x54carbine"
+	caliber = "7.5x54"
+	ammo_type = /obj/item/ammo_casing/caseless/impulsecarbine
+	matter = list(DEFAULT_WALL_MATERIAL = 2400)
+	max_ammo = 15
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/a75x54/ap
+	name = "ammo magazine (7.5x54mm caseless AP)"
+	desc = "An AP magazine for 7.5x54 impulse guns."
+	ammo_type = /obj/item/ammo_casing/caseless/impulsecarbine/ap
+	matter = list(DEFAULT_WALL_MATERIAL = 3600)
 
 ///////// .357 /////////
 
@@ -210,6 +311,15 @@
 /obj/item/ammo_magazine/m9mmt/practice
 	name = "top mounted magazine (9mm practice)"
 	ammo_type = /obj/item/ammo_casing/a9mmp
+
+/obj/item/ammo_magazine/new9mm
+    name = "magazine (9mm)"
+    icon_state = "9x19p"
+    mag_type = MAGAZINE
+    caliber = "9mm"
+    ammo_type = /obj/item/ammo_casing/a9mm
+    max_ammo = 12
+    multiple_sprites = 1
 
 /obj/item/ammo_magazine/m9mmp90
 	name = "high capacity top mounted magazine (9mm armor-piercing)"
@@ -511,4 +621,26 @@
 	ammo_type = /obj/item/ammo_casing/cap
 	matter = list(DEFAULT_WALL_MATERIAL = 600)
 	max_ammo = 7
+	multiple_sprites = 1
+
+//shotgun clips
+
+/obj/item/ammo_magazine/clip/shotgungauge
+	name = "ammo clip (12 gauge, beanbag)"
+	icon_state = "shotgunclip_beanbag"
+	desc = "That's the clip for rapid reloading of shotguns."
+	caliber = "12g"
+	ammo_type = /obj/item/ammo_casing/a12g/beanbag
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	max_ammo = 6
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/clip/shotgungaugepellet
+	name = "ammo clip (12 gauge, pellet)"
+	icon_state = "shotgunclip_pellet"
+	desc = "That's the clip for rapid reloading of shotguns."
+	caliber = "12g"
+	ammo_type = /obj/item/ammo_casing/a12g/pellet
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	max_ammo = 6
 	multiple_sprites = 1

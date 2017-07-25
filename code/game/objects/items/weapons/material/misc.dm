@@ -31,6 +31,7 @@
 	edge = 1
 	origin_tech = list(TECH_MATERIAL = 2, TECH_COMBAT = 1)
 	attack_verb = list("chopped", "torn", "cut")
+	drawsound = 'sound/items/unholster_knife.ogg'
 	applies_material_colour = 0
 
 /obj/item/weapon/material/hatchet/unathiknife
@@ -64,6 +65,7 @@
 	item_state = "knife"
 	attack_verb = list("stabbed", "chopped", "cut")
 	applies_material_colour = 1
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/hatchet/tacknife/combatknife
 	name = "combat knife"
@@ -75,6 +77,7 @@
 	thrown_force_divisor = 1.75 // 20 with weight 20 (steel)
 	attack_verb = list("sliced", "stabbed", "chopped", "cut")
 	applies_material_colour = 1
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/minihoe // -- Numbers
 	name = "mini hoe"

@@ -281,3 +281,41 @@
 /obj/item/projectile/bullet/pistol/cap/process()
 	loc = null
 	qdel(src)
+
+
+/obj/item/projectile/bullet/impulse
+    damage = 25
+    muzzle_type = /obj/effect/projectile/impulsebullet/muzzle
+
+/obj/item/projectile/bullet/impulse/traumatic
+    damage = 15
+    agony = 80
+    embed_chance = 0
+    sharp = 0
+    check_armour = "melee"
+
+/obj/item/projectile/bullet/impulse/traumatichp
+    damage = 30
+    agony = 10
+    sharp = 0
+
+/obj/item/projectile/bullet/impulse/ap
+    damage = 20
+    armor_penetration = 40
+    sharp = 0
+
+/obj/item/projectile/bullet/impulse/revolver
+    damage = 45
+
+/obj/item/projectile/bullet/impulse/revolver/ap
+    damage = 30
+    armor_penetration = 40
+    sharp = 0
+
+/obj/item/projectile/bullet/impulse/rifle
+    damage = 40
+
+/obj/item/projectile/bullet/impulse/rifle/ap
+    damage = 30
+    armor_penetration = 60
+    sharp = 0

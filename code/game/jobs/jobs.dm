@@ -1,16 +1,17 @@
-
 var/const/ENGSEC			=(1<<0)
 
 var/const/CAPTAIN			=(1<<0)
-var/const/HOS				=(1<<1)
-var/const/WARDEN			=(1<<2)
+var/const/SECCHIEF			=(1<<1)
+var/const/OVERSEER			=(1<<2)
 var/const/DETECTIVE			=(1<<3)
-var/const/OFFICER			=(1<<4)
-var/const/CHIEF				=(1<<5)
-var/const/ENGINEER			=(1<<6)
-var/const/ATMOSTECH			=(1<<7)
-var/const/AI				=(1<<8)
-var/const/CYBORG			=(1<<9)
+var/const/CONSTABLE			=(1<<4)
+var/const/SENCONSTABLE		=(1<<5)
+var/const/CHIEF				=(1<<6)
+var/const/ENGINEER			=(1<<7)
+var/const/ATMOSTECH			=(1<<8)
+var/const/AI				=(1<<9)
+var/const/CYBORG			=(1<<10)
+var/const/FORTECH			=(1<<11)
 
 
 var/const/MEDSCI			=(1<<1)
@@ -44,8 +45,7 @@ var/const/CHAPLAIN			=(1<<10)
 var/const/CLOWN				=(1<<11)
 var/const/MIME				=(1<<12)
 var/const/ASSISTANT			=(1<<13)
-var/const/BRIDGE			=(1<<14)
-
+var/const/BRIDGE            =(1<<14)
 
 var/list/assistant_occupations = list(
 )
@@ -108,10 +108,12 @@ var/list/civilian_positions = list(
 
 
 var/list/security_positions = list(
-	"Head of Security",
-	"Warden",
-	"Detective",
-	"Security Officer"
+    "Security Commissioner",
+    "Brig Overseer",
+    "Investigator",
+    "Forensic Technician",
+    "Colonial Officer",
+    "Colonial Senior Officer"
 )
 
 

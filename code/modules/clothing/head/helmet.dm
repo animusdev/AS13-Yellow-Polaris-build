@@ -2,15 +2,19 @@
 	name = "helmet"
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
+	item_state_slots = list(
+		slot_l_hand_str = "helmet",
+		slot_r_hand_str = "helmet",
+		)
 	flags = THICKMATERIAL
-	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 35, bullet = 20, laser = 35, energy = 10, bomb = 35, bio = 0, rad = 0)
 	flags_inv = HIDEEARS|HIDEEYES
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HEAD
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
-	w_class = ITEMSIZE_NORMAL
+	w_class = 3
 	ear_protection = 1
 
 /obj/item/clothing/head/helmet/solgov
@@ -182,3 +186,48 @@
 	name = "emergency response team medical helmet"
 	desc = "A set of armor worn by medical members of the NanoTrasen Emergency Response Team. Has red and white highlights."
 	icon_state = "erthelmet_med"
+
+/obj/item/clothing/head/helmet/combathelm
+	name = "combat helmet"
+	desc = "It's a helmet designed for assault teams."
+	icon_state = "combathelmet_sentinel"
+	armor = list(melee = 60, bullet = 65, laser = 50, energy = 30, bomb = 50, bio = 0, rad = 0)
+	flags_inv = HIDEEARS
+	siemens_coefficient = 0.2
+	var/modetoggled = 0
+
+	verb/visor()
+		set category = "Object"
+		set name = "Toggle helmet mode"
+		set src in usr
+		if(usr.canmove && !usr.stat && !usr.restrained())
+			src.modetoggled = !src.modetoggled
+			if(src.modetoggled)
+				icon_state = "combathelmet_breacher"
+				usr << "You toggle your helmet to the Breacher mode."
+				flags_inv = HIDEEARS
+				flags = THICKMATERIAL
+				armor = list(melee = 35, bullet = 30, laser = 30, energy = 35, bomb = 25, bio = 0, rad = 0)
+				siemens_coefficient = 0.7
+			else
+				src.icon_state = initial(icon_state)
+				usr << "You toggle your helmet to the Battle mode."
+				armor = list(melee = 60, bullet = 60, laser = 60, energy = 35, bomb = 60, bio = 0, rad = 0)
+				siemens_coefficient = 0.3
+
+			update_clothing_icon()
+
+/obj/item/clothing/head/helmet/secchief
+	name = "security commissioner's hat"
+	desc = "The hat of the Security Commissioner. For showing the officers who's in charge."
+	icon_state = "secchiefcap"
+	body_parts_covered = 0
+	siemens_coefficient = 0.4
+	armor = list(melee = 40, bullet = 55, laser = 30, energy = 40, bomb = 35, bio = 0, rad = 0)
+
+/obj/item/clothing/head/helmet/overseer
+	name = "overseer's hat"
+	desc = "It's a special cap issued to the Overseer of a securiy force."
+	icon_state = "overseercap"
+	body_parts_covered = 0
+

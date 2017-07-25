@@ -9,6 +9,7 @@
 	attack_verb = list("patted", "tapped")
 	force_divisor = 0.25 // 15 when wielded with hardness 60 (steel)
 	thrown_force_divisor = 0.25 // 5 when thrown with weight 20 (steel)
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/butterfly/update_force()
 	if(active)
@@ -33,6 +34,7 @@
 	name = "switchblade"
 	desc = "A classic switchblade with gold engraving. Just holding it makes you feel like a gangster."
 	icon_state = "switchblade"
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/butterfly/boxcutter
 	name = "box cutter"
@@ -77,6 +79,7 @@
 	name = "meat hook"
 	desc = "A sharp, metal hook what sticks into things."
 	icon_state = "hook_knife"
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/knife/ritual
 	name = "ritual knife"
@@ -84,6 +87,7 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "render"
 	applies_material_colour = 0
+	drawsound = 'sound/items/unholster_knife.ogg'
 
 /obj/item/weapon/material/knife/butch
 	name = "butcher's cleaver"
@@ -92,3 +96,4 @@
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
 	force_divisor = 0.25 // 15 when wielded with hardness 60 (steel)
 	attack_verb = list("cleaved", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	drawsound = 'sound/items/unholster_knife.ogg'

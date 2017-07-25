@@ -311,3 +311,73 @@
 
 /obj/item/weapon/gun/projectile/luger/brown
 	icon_state = "p08b"
+
+/obj/item/weapon/gun/projectile/impulsetrauma
+	name = "\improper 10mm impulse pistol"
+	desc = "That's a Diemaco Guardian, an impulse traumatic pistol popular among the Themis Security employees. Uses 10x45mm rounds."
+	icon_state = "traumaticpistol"
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
+	caliber = "10x45"
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/a10x45/
+	fire_sound = 'sound/weapons/fireimpulsepistol.wav'
+	allowed_magazines = list(/obj/item/ammo_magazine/a10x45)
+
+/obj/item/weapon/gun/projectile/impulsetrauma/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-empty"
+
+/obj/item/weapon/gun/projectile/impulsesec
+	name = "\improper 5.7mm impulse pistol"
+	desc = "That's a H&R M26, an impulse semi-automatic pistol popular among the Themis Security employees. Uses 5.7x28mm rounds."
+	icon_state = "secpistol"
+	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3)
+	caliber = "5.7x28"
+	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/fireimpulsepistol.wav'
+	magazine_type = /obj/item/ammo_magazine/a57x28
+	allowed_magazines = list(/obj/item/ammo_magazine/a57x28)
+
+/obj/item/weapon/gun/projectile/impulsesec/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-empty"
+
+/obj/item/weapon/gun/projectile/pl
+	name = "\improper Lebedev PL"
+	desc = "no desc."
+	icon_state = "pl"
+	caliber = "9mm"
+	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/semiauto.ogg'
+	magazine_type = /obj/item/ammo_magazine/new9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/new9mm)
+
+/obj/item/weapon/gun/projectile/pl/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-empty"
+
+/obj/item/weapon/gun/projectile/l15
+	name = "\improper L15 pistol"
+	desc = "no desc."
+	icon_state = "l15"
+	caliber = "9mm"
+	load_method = MAGAZINE
+	fire_sound = 'sound/weapons/semiauto.ogg'
+	magazine_type = /obj/item/ammo_magazine/new9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/new9mm)
+
+/obj/item/weapon/gun/projectile/l15/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "[initial(icon_state)]"
+	else
+		icon_state = "[initial(icon_state)]-empty"
