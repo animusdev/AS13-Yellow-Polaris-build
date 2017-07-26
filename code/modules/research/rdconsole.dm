@@ -112,6 +112,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 		for(var/obj/machinery/r_n_d/server/centcom/S in machines)
 			S.initialize()
 			break
+	update_icon()
 
 /obj/machinery/computer/rdconsole/initialize()
 	SyncRDevices()

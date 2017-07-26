@@ -320,3 +320,20 @@
 		new /obj/item/weapon/reagent_containers/pill/citalopram( src )
 		new /obj/item/weapon/reagent_containers/pill/citalopram( src )
 		new /obj/item/weapon/reagent_containers/pill/citalopram( src )
+
+/obj/item/weapon/storage/firstaid/sec
+    name = "personal medical kit"
+    desc = "That's a personal medkit used by Themis Security personnel."
+    icon_state = "secmedpack"
+    item_state = "contsolid"
+    max_storage_space = 6
+    w_class = 2
+
+    New()
+        ..()
+        new /obj/item/weapon/reagent_containers/syringe( src )
+        new /obj/item/stack/medical/bruise_pack/sec( src )
+        new /obj/item/weapon/reagent_containers/glass/beaker/vial/small/spaceacillin( src )
+        new /obj/item/weapon/reagent_containers/glass/beaker/vial/small/tramadol( src )
+        new /obj/item/weapon/reagent_containers/glass/beaker/vial/small/hemostatic( src )
+        return

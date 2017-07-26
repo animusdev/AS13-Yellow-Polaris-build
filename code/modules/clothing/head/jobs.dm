@@ -157,6 +157,16 @@
 	icon_state = "beret_corporate_hos"
 	item_state_slots = list(slot_r_hand_str = "beret_black", slot_l_hand_str = "beret_black")
 
+/obj/item/clothing/head/beret/seniorconstable
+	name = "senior constable's beret"
+	desc = "A dark blue beret adorned with a silver patch. Worn by Themis Security senior constables."
+	icon_state = "beret_seniorconstable"
+
+/obj/item/clothing/head/beret/secchief
+	name = "security chiefs beret"
+	desc = "A beret with the security insignia emblazoned on it. For officers that are more inclined towards style than safety."
+	icon_state = "beret_secchief"
+
 //Medical
 /obj/item/clothing/head/surgery
 	name = "surgical cap"
@@ -189,3 +199,9 @@
 	desc = "A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is navy blue."
 	icon_state = "surgcap_navyblue"
 	item_state_slots = list(slot_r_hand_str = "beret_navy", slot_l_hand_str = "beret_navy")
+
+/obj/item/clothing/head/constableforagecap
+	name = "forage cap"
+	desc = "That's a forage cap with a NT insignia on it."
+	icon_state = "constableforagecap"
+

@@ -164,7 +164,7 @@
 	usable = 0
 	selectable = 1
 	toggleable = 1
-	use_power_cost = 50
+	use_power_cost = 300
 	active_power_cost = 10
 	passive_power_cost = 0
 
@@ -181,7 +181,8 @@
 
 /obj/item/rig_module/mounted/energy_blade/activate()
 
-	..()
+	if(!..())
+		return
 
 	var/mob/living/M = holder.wearer
 
@@ -193,6 +194,7 @@
 	var/obj/item/weapon/melee/energy/blade/blade = new(M)
 	blade.creator = M
 	M.put_in_hands(blade)
+	playsound(M, 'sound/items/Genji_ult.ogg', 50, 1)
 
 /obj/item/rig_module/mounted/energy_blade/deactivate()
 

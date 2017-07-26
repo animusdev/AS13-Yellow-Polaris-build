@@ -268,3 +268,6 @@
 	light_range = 2
 	light_power = 0.5
 	light_color = "#8837A3"
+
+/obj/effect/projectile/impulsebullet/muzzle
+	icon_state = "muzzle_impulse"

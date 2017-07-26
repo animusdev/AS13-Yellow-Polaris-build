@@ -3,8 +3,8 @@
 /// (Mixing)Glass.
 ////////////////////////////////////////////////////////////////////////////////
 /obj/item/weapon/reagent_containers/glass
-	name = " "
-	var/base_name = " "
+	name = ""
+	var/base_name = ""
 	desc = " "
 	var/base_desc = " "
 	icon = 'icons/obj/chemical.dmi'
@@ -48,8 +48,11 @@
 
 /obj/item/weapon/reagent_containers/glass/New()
 	..()
-	base_name = name
 	base_desc = desc
+	if(!base_name)
+		base_name = name
+	else
+		update_name_label()
 
 /obj/item/weapon/reagent_containers/glass/examine(var/mob/user)
 	if(!..(user, 2))
@@ -220,6 +223,34 @@
 		..()
 		reagents.add_reagent("sacid", 60)
 		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/small/tramadol
+	label_text = "analgesic"
+
+	New()
+		..()
+		reagents.add_reagent("oxycodone",10)
+		update_icon()
+		update_name_label()
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/small/spaceacillin
+	label_text = "antibiotic"
+
+	New()
+		..()
+		reagents.add_reagent("spaceacillin",10)
+		update_icon()
+		update_name_label()
+
+
+/obj/item/weapon/reagent_containers/glass/beaker/vial/small/hemostatic
+	label_text = "hemostatic"
+
+	New()
+		..()
+		reagents.add_reagent("bicaridine",10)
+		update_icon()
+		update_name_label()
 
 /obj/item/weapon/reagent_containers/glass/bucket
 	desc = "It's a bucket."

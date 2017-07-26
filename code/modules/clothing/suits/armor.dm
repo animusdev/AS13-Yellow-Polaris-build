@@ -455,3 +455,107 @@
 	desc = "Pukish armor."
 	icon_state = "tdgreen"
 	siemens_coefficient = 1
+
+/obj/item/clothing/suit/storage/vest/heavy/combatarmor
+	name = "combat armor"
+	desc = "That's the heavy combat exosuit designed for assault teams."
+	icon_state = "combatarmor_sentinel"
+	item_state = "combatarmor_sentinel"
+	armor = list(melee = 70, bullet = 80, laser = 60, energy = 35, bomb = 70, bio = 0, rad = 0)
+	slowdown = 5
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	siemens_coefficient = 0.1
+	var/modetoggled = 0
+
+	verb/armormode()
+		set category = "Object"
+		set name = "Toggle armor mode"
+		set src in usr
+		if(usr.canmove && !usr.stat && !usr.restrained())
+			src.modetoggled = !src.modetoggled
+			if(src.modetoggled)
+				icon_state = "combatarmor_breacher"
+				usr << "You toggle your armor to the Breacher mode."
+				armor = list(melee = 25, bullet = 40, laser = 30, energy = 35, bomb = 30, bio = 0, rad = 0)
+				slowdown = 1
+				siemens_coefficient = 0.7
+				body_parts_covered = UPPER_TORSO|LOWER_TORSO
+			else
+				src.icon_state = initial(icon_state)
+				usr << "You toggle your armor to the Battle mode."
+				armor = list(melee = 70, bullet = 80, laser = 60, energy = 35, bomb = 70, bio = 0, rad = 0)
+				slowdown = 5
+				body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+				siemens_coefficient = 0.1
+
+			update_clothing_icon()
+
+//New Vests
+/obj/item/clothing/suit/storage/vest
+	name = "armor vest"
+	desc = "A simple kevlar plate carrier."
+	icon_state = "kvest"
+	item_state = "kvest"
+	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
+	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/reagent_containers/spray/pepper,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/device/flashlight/maglight)
+
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	item_flags = THICKMATERIAL
+
+	cold_protection = UPPER_TORSO|LOWER_TORSO
+	min_cold_protection_temperature = ARMOR_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = UPPER_TORSO|LOWER_TORSO
+	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.6
+
+//MadmanTM
+/obj/item/clothing/suit/storage/vest/constable
+	name = "colonial officer's armor vest"
+	desc = "A simple kevlar plate carrier. This one has a security badge clipped to the chest."
+	icon_state = "constablevest"
+	item_state = "constablevest"
+	armor = list(melee = 35, bullet = 45, laser = 35, energy = 10, bomb = 20, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/vest/seniorconstable
+	name = "colonial senior officer's armor vest"
+	desc = "A simple kevlar plate carrier. This one has a security badge clipped to the chest."
+	icon_state = "seniorconstablevest"
+	item_state = "seniorconstablevest"
+
+/obj/item/clothing/suit/storage/vest/overseer
+	name = "overseer armor vest"
+	desc = "A simple kevlar plate carrier. This one has a red badge clipped to the chest."
+	icon_state = "overseervest"
+	item_state = "overseervest"
+
+/obj/item/clothing/suit/storage/vest/secchief
+	name = "security commissioner armor vest"
+	desc = "A simple kevlar plate carrier. This one has a gold badge clipped to the chest."
+	icon_state = "secchiefvest"
+	item_state = "secchiefvest"
+
+/obj/item/clothing/suit/storage/vest/heavy
+	name = "heavy armor vest"
+	desc = "A heavy kevlar plate carrier with webbing attached."
+	icon_state = "webvest"
+	item_state = "webvest"
+	armor = list(melee = 40, bullet = 55, laser = 40, energy = 25, bomb = 25, bio = 0, rad = 0)
+	slowdown = 1
+
+/obj/item/clothing/suit/armor/secchief
+	name = "armored overcoat"
+	desc = "An overcoat enhanced with a special alloy for some protection and style."
+	icon_state = "secchiefcoat"
+	item_state = "secchiefcoat"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	armor = list(melee = 45, bullet = 65, laser = 40, energy = 40, bomb = 40, bio = 0, rad = 0)
+	flags_inv = HIDEJUMPSUIT
+	siemens_coefficient = 0.3
+
+/obj/item/clothing/suit/armor/vest/overseer
+	name = "overseer's overcoat"
+	desc = "An overcoat with some armor. Perfect for NKVD basements, isn't it?"
+	icon_state = "overseercoat"
+	item_state = "overseercoat"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	armor = list(melee = 45, bullet = 65, laser = 40, energy = 40, bomb = 40, bio = 0, rad = 0)

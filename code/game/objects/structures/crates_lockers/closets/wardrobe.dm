@@ -4,12 +4,12 @@
 	icon_state = "blue"
 	icon_closed = "blue"
 
-/obj/structure/closet/wardrobe/red
+/obj/structure/closet/wardrobe/blue
 	name = "security wardrobe"
-	icon_state = "red"
-	icon_closed = "red"
+	icon_state = "blue"
+	icon_closed = "blue"
 
-/obj/structure/closet/wardrobe/red/New()
+/obj/structure/closet/wardrobe/blue/New()
 	..()
 	if(prob(50))
 		new /obj/item/weapon/storage/backpack/security(src)
@@ -23,33 +23,22 @@
 		new /obj/item/weapon/storage/backpack/security(src)
 	else
 		new /obj/item/weapon/storage/backpack/satchel/sec(src)
-	new /obj/item/clothing/under/rank/security(src)
-	new /obj/item/clothing/under/rank/security(src)
-	new /obj/item/clothing/under/rank/security(src)
-	new /obj/item/clothing/under/rank/security2(src)
-	new /obj/item/clothing/under/rank/security2(src)
-	new /obj/item/clothing/under/rank/security2(src)
+	new /obj/item/clothing/under/rank/constable(src)
+	new /obj/item/clothing/under/rank/constable(src)
+	new /obj/item/clothing/under/rank/constable(src)
+	new /obj/item/clothing/under/rank/constable(src)
 	new /obj/item/clothing/shoes/boots/jackboots(src)
 	new /obj/item/clothing/shoes/boots/jackboots(src)
 	new /obj/item/clothing/shoes/boots/jackboots(src)
 	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)
 	new /obj/item/clothing/head/soft/sec(src)
-	new /obj/item/clothing/head/beret/sec(src)
-	new /obj/item/clothing/head/beret/sec(src)
-	new /obj/item/clothing/head/beret/sec(src)
-	new /obj/item/clothing/head/beret/sec/corporate/officer(src)
-	new /obj/item/clothing/head/beret/sec/corporate/officer(src)
-	new /obj/item/clothing/head/beret/sec/corporate/officer(src)
-	new /obj/item/clothing/mask/bandana/red(src)
-	new /obj/item/clothing/mask/bandana/red(src)
-	new /obj/item/clothing/mask/bandana/red(src)
+	new /obj/item/clothing/head/constableforagecap(src)
+	new /obj/item/clothing/head/constableforagecap(src)
+	new /obj/item/clothing/head/constableforagecap(src)
 	new /obj/item/clothing/suit/storage/hooded/wintercoat/security(src)
 	new /obj/item/clothing/suit/storage/hooded/wintercoat/security(src)
 	new /obj/item/clothing/suit/storage/hooded/wintercoat/security(src)
-	new /obj/item/clothing/accessory/armband(src)
-	new /obj/item/clothing/accessory/armband(src)
-	new /obj/item/clothing/accessory/armband(src)
 	new /obj/item/clothing/accessory/holster/waist(src)
 	new /obj/item/clothing/accessory/holster/waist(src)
 	new /obj/item/clothing/accessory/holster/waist(src)

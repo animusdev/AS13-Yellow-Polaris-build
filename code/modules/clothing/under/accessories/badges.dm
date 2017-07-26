@@ -130,3 +130,28 @@
 		new /obj/item/clothing/accessory/badge/holo/cord(src)
 		..()
 		return
+
+/obj/item/clothing/accessory/badge/sec/constable
+	name = "colonial officer's badge"
+	desc = "A silver Themis Security badge. Stamped with the words 'Colonial Officer.'"
+	icon_state = "constablebadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/sec/seniorconstable
+	name = "colonial senior officer's badge"
+	desc = "A silver Themis Security badge. Stamped with the words 'Colonial Senior Officer.'"
+	icon_state = "constablebadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/sec/overseer
+	name = "overseer's badge"
+	desc = "A silver Themis Security badge. Stamped with the words 'Overseer.'"
+	icon_state = "overseerbadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+
+/obj/item/clothing/accessory/badge/sec/secchief
+	name = "head of security's badge"
+	desc = "An immaculately polished gold security badge. Labeled 'Head of Security.'"
+	icon_state = "secchiefbadge"
+	slot_flags = SLOT_TIE | SLOT_BELT
+

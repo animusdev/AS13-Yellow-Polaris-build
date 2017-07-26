@@ -122,6 +122,11 @@
 	desc = "A warning sign which reads 'NO SMOKING'."
 	icon_state = "nosmoking2"
 
+/obj/structure/sign/themissecurity
+	name = "\improper Themis Security"
+	desc = "That's the Themis Security insignia."
+	icon_state = "themissecurity"
+
 /obj/structure/sign/warning
 	name = "\improper WARNING"
 	icon_state = "securearea"

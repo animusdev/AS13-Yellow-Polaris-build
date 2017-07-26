@@ -204,3 +204,13 @@
 		to_chat(user, "\The [src] has a secondary barrel loaded with \a [to_print]")
 	else
 		to_chat(user, "\The [src] has a secondary barrel that is empty.")
+
+/obj/item/weapon/gun/projectile/revolver/warden
+	name = "impulse revolver"
+	desc = "That's a H&R R8 Commander's Special, standard-issue impulse-action revolver of the Themis Security officers. You are in charge!"
+	icon_state = "wardenrevolver"
+	caliber = "32"
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
+	fire_sound = 'sound/weapons/fireimpulserevolver.ogg'
+	ammo_type = /obj/item/ammo_casing/caseless/wardenrevolver
+	max_shells = 6

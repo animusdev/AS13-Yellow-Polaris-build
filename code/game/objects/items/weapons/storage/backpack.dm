@@ -350,3 +350,21 @@
 	w_class = ITEMSIZE_LARGE
 	max_w_class = ITEMSIZE_NORMAL
 	max_storage_space = ITEMSIZE_COST_NORMAL * 5
+
+/obj/item/weapon/storage/backpack/satchel/sec
+	name = "security satchel"
+	desc = "A robust satchel for security related needs."
+	icon_state = "satchel-sec"
+	item_state_slots = list(
+		slot_l_hand_str = "securitypack",
+		slot_r_hand_str = "securitypack",
+		)
+
+/obj/item/weapon/storage/backpack/duffle/sec
+	name = "security dufflebag"
+	desc = "A large dufflebag for holding extra security supplies and ammunition."
+	icon_state = "duffle_sec"
+	item_state_slots = list(
+		slot_l_hand_str = "duffle_sec",
+		slot_r_hand_str = "duffle_sec",
+		)
