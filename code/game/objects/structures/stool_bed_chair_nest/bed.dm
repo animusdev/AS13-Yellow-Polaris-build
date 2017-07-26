@@ -303,3 +303,96 @@
 		spawn(0)
 			qdel(src)
 		return
+
+/obj/structure/bed/sofa
+	name = "comfy sofa"
+	desc = "So lovely, uh."
+	icon_state = "sofa_right"
+	buckle_dir = 0
+	buckle_lying = 0
+	color = null
+
+
+/obj/structure/bed/sofa/left
+	icon_state = "sofa_left"
+
+/obj/structure/bed/sofa/New(var/newloc)
+	base_icon = icon_state
+	..(newloc,"plastic")
+
+/obj/structure/bed/sofa/update_icon()
+    if(src.dir == NORTH)
+        src.layer = 5
+    else
+        src.layer = OBJ_LAYER
+
+/obj/structure/bed/sofa/black/corner
+    icon_state = "couchblack_corner"
+
+/obj/structure/bed/sofa/black/corner/update_icon()
+    overlays.Cut()
+    var/cache_key = "[base_icon]_armrest"
+    if(isnull(stool_cache[cache_key]))
+        var/image/I = image(icon, "[base_icon]_armrest")
+        I.layer = MOB_LAYER + 0.1
+        stool_cache[cache_key] = I
+    overlays |= stool_cache[cache_key]
+
+/obj/structure/bed/sofa/black
+	icon_state = "couchblack_middle"
+
+/obj/structure/bed/sofa/black/left
+	icon_state = "couchblack_left"
+
+/obj/structure/bed/sofa/black/right
+	icon_state = "couchblack_right"
+
+/obj/structure/bed/sofa/beige
+	icon_state = "couchbeige_middle"
+
+/obj/structure/bed/sofa/beige/left
+	icon_state = "couchbeige_left"
+
+/obj/structure/bed/sofa/beige/right
+	icon_state = "couchbeige_right"
+
+/obj/structure/bed/sofa/beige/corner
+	icon_state = "couchbeige_corner"
+
+/obj/structure/bed/sofa/brown
+	icon_state = "couchbrown_middle"
+
+/obj/structure/bed/sofa/brown/left
+	icon_state = "couchbrown_left"
+
+/obj/structure/bed/sofa/brown/right
+	icon_state = "couchbrown_right"
+
+/obj/structure/bed/sofa/brown/corner
+	icon_state = "couchbrown_corner"
+
+/obj/structure/bed/sofa/teal
+	icon_state = "couchteal_middle"
+
+/obj/structure/bed/sofa/teal/left
+	icon_state = "couchteal_left"
+
+/obj/structure/bed/sofa/teal/right
+	icon_state = "couchteal_right"
+
+/obj/structure/bed/sofa/teal/corner
+	icon_state = "couchteal_corner"
+
+/obj/structure/bed/sofa/post_buckle_mob()
+    update_icon()
+
+/obj/structure/bed/sofa/update_icon()
+    overlays.Cut()
+    ..()
+    var/cache_key = "[base_icon]-armrest-sofa"
+    if(isnull(stool_cache[cache_key]))
+        var/image/I = image(icon, "sofa_armrest")
+        I.layer = MOB_LAYER + 0.1
+        I.color = padding_material.icon_colour
+        stool_cache[cache_key] = I
+    overlays |= stool_cache[cache_key]

@@ -37,6 +37,10 @@ datum/track/New(var/title_name, var/audio)
 		new/datum/track("Part A", 'sound/misc/TestLoop1.ogg'),
 		new/datum/track("Scratch", 'sound/music/title1.ogg'),
 		new/datum/track("Trai`Tor", 'sound/music/traitor.ogg'),
+		new/datum/track("Front mission", 'sound/music/FM3_bartheme.ogg'),
+		new/datum/track("Stalker?", 'sound/music/radio_music_1.ogg'),
+		new/datum/track("Masleena", 'sound/music/radio_music_2.ogg'),
+		new/datum/track("Dirge for the Planet", 'sound/music/Dirge_for_the_Planet.ogg'),
 	)
 
 	// Only visible if hacked
@@ -44,7 +48,8 @@ datum/track/New(var/title_name, var/audio)
 		new/datum/track("Clown", 'sound/music/clown.ogg'),
 		new/datum/track("Space Asshole", 'sound/music/space_asshole.ogg'),
 		new/datum/track("Thunderdome", 'sound/music/THUNDERDOME.ogg'),
-		new/datum/track("Russkiy rep Diskoteka", 'sound/music/russianrapdisco.ogg')
+		new/datum/track("Russkiy rep Diskoteka", 'sound/music/russianrapdisco.ogg'),
+		new/datum/track("Soviet March", 'sound/music/Soviet_March.ogg'),
 	)
 
 /obj/machinery/media/jukebox/New()
